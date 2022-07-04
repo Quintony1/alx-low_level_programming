@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- *
  * _puts - prints a string to the standard output
  * @str: a string
  *
@@ -59,10 +58,10 @@ int main(int argc, char **argv)
 		}
 		res[i] += carry, carry = 0;
 	}
-	for (i = 0, sig0 = 0; i < len_r; i++, sig0 = sig0 || !!res[i]
-			if (res[i] || sig0 || i == len_r - 1)
+	for (i = 0, sig0 = 0; i < len_r; i++, sig0 = sig0 || !!res[i])
+		if (res[i] || sig0 || i == len_r - 1)
 			_putchar(res[i] + '0');
-			_putchar('\n');
-			free(res);
-			return (0);
-			}
+	_putchar('\n');
+	free(res);
+	return (0);
+}
